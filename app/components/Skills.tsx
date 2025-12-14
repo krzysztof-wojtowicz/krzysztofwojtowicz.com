@@ -6,6 +6,9 @@ import Image from "next/image";
 export default function Skills() {
   const skillsList = [
     "c",
+    "c++",
+    "csharp",
+    "matlab",
     "python",
     "javascript",
     "typescript",

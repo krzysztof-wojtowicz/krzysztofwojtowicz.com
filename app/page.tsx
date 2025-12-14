@@ -110,7 +110,7 @@ export default function Home() {
             "DroneCone's official website, built with modern web technologies for a fast, interactive, and visually stunning experience."
           }
           tech='"next.js", "tailwind css", "framer motion", "resend api"'
-          link={"https://dronecone.pl"}
+          link={"https://dronecone.vercel.app"}
           github_link={
             "https://github.com/krzysztof-wojtowicz/dronecone-website"
           }
