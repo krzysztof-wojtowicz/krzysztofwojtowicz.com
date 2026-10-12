@@ -34,15 +34,17 @@ export default function Header() {
       id="header"
       className="w-full flex justify-between items-start md:items-center pt-4 md:pt-8 pb-2 border-b border-secondary text-sm md:text-base opacity-0"
     >
-      <div
-        id="header-name"
-        className="font-semibold"
-        onMouseEnter={(e) => {
-          handleMouseEnter(e);
-        }}
-      >
-        krzysztof_wójtowicz
-      </div>
+      <Link href="/">
+        <div
+          id="header-name"
+          className="font-semibold"
+          onMouseEnter={(e) => {
+            handleMouseEnter(e);
+          }}
+        >
+          krzysztof_wójtowicz
+        </div>
+      </Link>
       <div className="flex flex-col md:flex-row items-end md:items-center gap-2 md:gap-8">
         {/* <Link href="#about">{"about_me()"}</Link>
         <Link href="#projects">{"projects()"}</Link> */}
