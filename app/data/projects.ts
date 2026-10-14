@@ -14,6 +14,45 @@ export type ProjectData = {
 
 export const projects: ProjectData[] = [
   {
+    slug: "rpg-console-game",
+    title: "rpg_console_game",
+    year: 2026,
+    short: "Multiplayer roguelike dungeon crawler that runs in the terminal.",
+    description:
+      "Multiplayer roguelike dungeon crawler written in C# that runs entirely in the terminal, built for the Object-Oriented Design course at WUT. Up to 9 players connect to an authoritative server over TCP and explore a procedurally generated, hacker-themed dungeon together, collecting loot and fighting enemies that see and hear them. Almost every game system is built on a classic design pattern, from commands and strategies to decorators, builders and abstract factories, all rendered in a flicker-free, colored console UI.",
+    tech: ["c#", ".net", "tcp sockets", "json", "design patterns"],
+    image: "/img/rpg_console_game.png",
+    github_link: "https://github.com/krzysztof-wojtowicz/rpg-console-game",
+  },
+  {
+    slug: "backup-wizard",
+    title: "backup_wizard",
+    year: 2025,
+    short: "Real-time file backup CLI for Linux, written in C.",
+    description:
+      "Interactive command-line tool for real-time file backups on Linux, built for the Operating Systems 1 course at WUT. It watches source directories with the inotify API and mirrors every change to one or more targets, running each backup in its own child process so the shell stays responsive. It also features a smart restore that copies only changed files, symlink handling, graceful shutdown on signals and activity logging.",
+    tech: ["c", "linux", "inotify", "posix processes", "signals", "make"],
+    github_link:
+      "https://github.com/krzysztof-wojtowicz/interactive-backup-wizard",
+  },
+  {
+    slug: "numerical-methods",
+    title: "numerical_methods",
+    year: 2025,
+    short: "Root finding, Fourier approximation and ODE solvers in MATLAB.",
+    description:
+      "A collection of numerical methods implemented from scratch in MATLAB for the Numerical Methods course at WUT: a global root finder based on vectorized bisection, a trigonometric approximation tool that evaluates Fourier series with the Goertzel algorithm (about 3x faster than direct summation), and a solver for linear ODEs of any order using three variants of 4th-order Runge-Kutta methods.",
+    tech: [
+      "matlab",
+      "bisection",
+      "fourier series",
+      "goertzel algorithm",
+      "runge-kutta",
+    ],
+    github_link:
+      "https://github.com/krzysztof-wojtowicz/matlab-numerical-methods-projects",
+  },
+  {
     slug: "mapple",
     title: "mapple",
     year: 2023,

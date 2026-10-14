@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: Props) {
 
   return (
     <Card href={`/projects/${slug}`}>
-      {image && (
+      {image ? (
         <div className="relative w-full h-24 md:h-28">
           <Image
             src={image}
@@ -35,6 +35,11 @@ export default function ProjectCard({ project }: Props) {
             sizes="(min-width: 640px) 200px, 160px"
             className="object-contain"
           />
+        </div>
+      ) : (
+        // placeholder keeps cards in a row the same height
+        <div className="w-full h-24 md:h-28 flex items-center justify-center text-4xl md:text-5xl font-bold text-accent">
+          {"</>"}
         </div>
       )}
 

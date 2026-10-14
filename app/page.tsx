@@ -4,7 +4,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
-import Skills from "./components/Skills";
+// import Skills from "./components/Skills"; // hidden for now
 import Projects from "./components/Projects";
 import Interests from "./components/Interests";
 import Footer from "./components/Footer";
@@ -50,13 +50,13 @@ export default function Home() {
     tl.fromTo(
       ".socials",
       { opacity: 0, scale: 0.3 },
-      { opacity: 1, scale: 1, stagger: 0.1, duration: 0.3, ease: "back" }
+      { opacity: 1, scale: 1, stagger: 0.1, duration: 0.3, ease: "back" },
     );
 
     tl.fromTo(
       "#my-projects",
       { scale: 0.2, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 0.4, ease: "back" }
+      { scale: 1, opacity: 1, duration: 0.4, ease: "back" },
     );
 
     tl.fromTo("#about", { opacity: 0 }, { opacity: 1, duration: 0.4 });
@@ -69,7 +69,7 @@ export default function Home() {
       repeat: -1,
     });
 
-    tl2.to("#skills", { opacity: 1 });
+    // tl2.to("#skills", { opacity: 1 }); // hidden for now
     tl2.to("#projects", { opacity: 1 });
     tl2.to("#interests", { opacity: 1 });
     tl2.to("#footer", { opacity: 1 });
@@ -82,7 +82,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center gap-16 w-full md:w-4/5">
         <AboutMe />
-        <Skills />
+        {/* <Skills /> hidden for now */}
         <Projects />
         <Interests />
       </div>

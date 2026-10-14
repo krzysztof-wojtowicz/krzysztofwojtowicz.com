@@ -26,7 +26,7 @@ export default function Hero() {
   const tl = gsap.timeline({});
 
   const handleMouseEnterStudent = () => {
-    tl.to("#student", { text: "at @wut;", duration: 0.3, ease: "none" });
+    tl.to("#student", { text: "@mini wut;", duration: 0.3, ease: "none" });
   };
 
   const handleMouseLeaveStudent = () => {
@@ -42,7 +42,7 @@ export default function Hero() {
   };
 
   const handleIconEnter = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) => {
     gsap.to(`#${e.currentTarget.id}`, {
       scale: 1.3,
@@ -52,7 +52,7 @@ export default function Hero() {
   };
 
   const handleIconLeave = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) => {
     gsap.to(`#${e.currentTarget.id}`, { scale: 1, duration: 0.3 });
   };

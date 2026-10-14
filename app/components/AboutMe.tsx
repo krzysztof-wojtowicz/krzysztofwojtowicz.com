@@ -12,10 +12,10 @@ export default function AboutMe() {
       </div>
       <div className="">
         <TextBlock
-          description="Hey! I’m Krzysztof Wójtowicz, a web developer currently 
-        studying Computer Science at the Faculty of Mathematics and Information Science 
+          description="Hey! I’m Krzysztof Wójtowicz, a software engineer currently 
+        studying Computer Science (3rd year) at the Faculty of Mathematics and Information Science 
         (Warsaw University of Technology). Beyond the code, I’m an active member of the 
-        Student Council. In my free time, I enjoy running and orienteering — navigating 
+        Student Council and JetBrains Campus Ambassador. In my free time, I enjoy running and orienteering — navigating 
         complex terrains, student initiatives and intricate code with the same drive for discovery."
         />
       </div>
