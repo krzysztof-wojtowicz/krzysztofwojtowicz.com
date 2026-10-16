@@ -131,6 +131,7 @@ export default function Hero() {
                 handleIconLeave(e);
               }}
               id="linkedin-icon"
+              aria-label="LinkedIn"
             >
               <Linkedin width={35} height={35} />
             </Link>
@@ -146,6 +147,7 @@ export default function Hero() {
                 handleIconLeave(e);
               }}
               id="github-icon"
+              aria-label="GitHub"
             >
               <Github width={35} height={35} />
             </Link>
@@ -161,6 +163,7 @@ export default function Hero() {
                 handleIconLeave(e);
               }}
               id="mail-icon"
+              aria-label="Email"
             >
               <Mail width={40} height={40} />
             </Link>
@@ -176,6 +179,7 @@ export default function Hero() {
                 handleIconLeave(e);
               }}
               id="strava-icon"
+              aria-label="Strava"
             >
               <Strava width={35} height={35} />
             </Link>
@@ -191,6 +195,7 @@ export default function Hero() {
                 handleIconLeave(e);
               }}
               id="youtube-icon"
+              aria-label="YouTube"
             >
               <Youtube width={35} height={35} />
             </Link>

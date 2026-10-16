@@ -4,19 +4,11 @@
 import Link from "next/link";
 
 type Props = {
-  href?: string; // card is clickable with "open()" only when set
+  href: string;
   children: React.ReactNode;
 };
 
 export default function Card({ href, children }: Props) {
-  if (!href) {
-    return (
-      <div className="flex flex-col gap-3 h-full p-4 border border-accent">
-        {children}
-      </div>
-    );
-  }
-
   return (
     <Link
       href={href}

@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
       <div className="text-[11px] md:text-xs flex flex-col items-center text-secondary">
         <span>made with 🧡 using next.js, tailwindcss and gsap</span>
-        <span>©2025 Krzysztof Wójtowicz</span>
+        <span>©2025-2026 Krzysztof Wójtowicz</span>
       </div>
     </div>
   );

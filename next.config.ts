@@ -1,6 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // interests section was renamed to activities
+  async redirects() {
+    return [
+      {
+        source: "/interests/:slug",
+        destination: "/activities/:slug",
+        permanent: true,
+      },
+    ];
+  },
+
   webpack: (config) => {
     config.module?.rules?.push({
       test: /\.svg$/,
@@ -17,13 +28,11 @@ const nextConfig: NextConfig = {
     return config;
   },
 
-  experimental: {
-    turbo: {
-      rules: {
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.js",
-        },
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
       },
     },
   },

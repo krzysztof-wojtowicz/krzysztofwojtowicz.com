@@ -43,7 +43,7 @@ export default function TextBlock({ description }: Props) {
 
       <div className="flex flex-col h-min" ref={ref}>
         <div className="text-secondary">{"/*"}</div>
-        <div className="text-justify">{description}</div>
+        <div className="text-left md:text-justify">{description}</div>
         <div className="text-secondary">{"*/"}</div>
       </div>
     </div>

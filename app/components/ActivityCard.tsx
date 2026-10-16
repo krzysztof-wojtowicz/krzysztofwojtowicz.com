@@ -4,18 +4,17 @@
 import Card from "./Card";
 
 // data
-import type { InterestData } from "../data/interests";
+import type { ActivityData } from "../data/activities";
 
 type Props = {
-  interest: InterestData;
-  clickable?: boolean; // false on the interest's own subpage
+  activity: ActivityData;
 };
 
-export default function InterestCard({ interest, clickable = true }: Props) {
-  const { slug, title, short } = interest;
+export default function ActivityCard({ activity }: Props) {
+  const { slug, title, short } = activity;
 
   return (
-    <Card href={clickable ? `/interests/${slug}` : undefined}>
+    <Card href={`/activities/${slug}`}>
       <span className="text-base md:text-lg text-primary font-bold">
         {title}
       </span>

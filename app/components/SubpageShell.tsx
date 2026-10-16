@@ -19,11 +19,17 @@ type Props = {
 
 export default function SubpageShell({ back, children }: Props) {
   useGSAP(() => {
-    const tl = gsap.timeline({ delay: 0.2 });
+    const tl = gsap.timeline();
 
-    tl.fromTo("#header", { opacity: 0 }, { opacity: 1, duration: 0.3 });
-    tl.fromTo("#subpage-content", { opacity: 0 }, { opacity: 1, duration: 0.4 });
-    tl.fromTo("#footer", { opacity: 0 }, { opacity: 1, duration: 0.3 });
+    // everything fades in together, footer slightly after
+    tl.fromTo("#header", { opacity: 0 }, { opacity: 1, duration: 0.2 });
+    tl.fromTo(
+      "#subpage-content",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.25 },
+      "<",
+    );
+    tl.fromTo("#footer", { opacity: 0 }, { opacity: 1, duration: 0.2 }, "<0.1");
   });
 
   return (
