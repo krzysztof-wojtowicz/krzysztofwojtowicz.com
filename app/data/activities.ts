@@ -11,6 +11,7 @@ export type ActivitySection = {
   heading?: string; // shown as "void <heading>()", no heading when not set
   description: string;
   tags?: string[];
+  stats?: Record<string, string>; // key numbers, shown as "stats = {key: value}"
   photos?: Photo[];
 };
 
@@ -29,15 +30,16 @@ export const activities: ActivityData[] = [
     short: "JetBrains Campus Ambassador at WUT.",
     sections: [
       {
+        heading: "community",
         description:
-          "As a JetBrains Campus Ambassador, I'm building and growing the JetBrains student community at Warsaw University of Technology. I represent JetBrains at university job fairs, where I talk with students about JetBrains professional tools, community initiatives, and internship opportunities. I organize educational lectures and workshops, partner with student organizations, and run fun events for students, like the Warsaw Outdoor Game. I also give short talks at student events, such as the AGH integration trip, where I presented what JetBrains offers to students.",
-        tags: [
-          "campus ambassador",
-          "job fairs",
-          "lectures",
-          "workshops",
-          "student events",
-        ],
+          "Since February 2026, I've been a JetBrains Campus Ambassador, leading the JetBrains student community at Warsaw University of Technology. I'm part of a 4-person Warsaw team (8 ambassadors across Poland) and act as the primary point of contact between the university and JetBrains. Together with local student organizations, I've organized 5+ technical workshops, lectures and events about modern software development tools, as well as fun events like the Warsaw Outdoor Game, reaching over 500 students.",
+        tags: ["campus ambassador", "lectures", "workshops", "student events"],
+        stats: {
+          since: "feb 2026",
+          events: "5+",
+          students_reached: "500+",
+          warsaw_team: "4",
+        },
         photos: [
           {
             src: "/img/jb/jb_me.jpg",
@@ -46,19 +48,30 @@ export const activities: ActivityData[] = [
             alt: "Me in a jacket with JetBrains patches",
             caption: "JetBrains Campus Ambassador at WUT",
           },
+        ],
+      },
+      {
+        heading: "internships",
+        description:
+          "As part of the JetBrains University Relations team, I promote JetBrains internship programmes among students. I represent JetBrains at university job fairs, where I talk with students about JetBrains professional tools, community initiatives and open positions, and I give short talks at student events, such as the AGH integration trip. So far, this has helped attract over 400 internship applications from WUT students.",
+        tags: ["job fairs", "internships", "university relations"],
+        stats: { internship_applications: "400+" },
+        photos: [
           {
             src: "/img/jb/jb_job_fair.jpg",
             width: 2500,
             height: 2240,
             alt: "Me talking with a student at the JetBrains booth",
-            caption: "Talking with students at the JetBrains booth during the WUT job fair",
+            caption:
+              "Talking with students at the JetBrains booth during the WUT job fair",
           },
           {
             src: "/img/jb/jb_presentation_agh.jpg",
             width: 2500,
             height: 2025,
             alt: "Me giving a presentation about JetBrains opportunities for students",
-            caption: "My presentation for participants of the AGH integration trip",
+            caption:
+              "My presentation for participants of the AGH integration trip",
           },
         ],
       },
@@ -71,15 +84,21 @@ export const activities: ActivityData[] = [
     logo: { src: "/img/wrs_mini/logo_wrs_mini.svg", alt: "WRS MiNI logo" },
     sections: [
       {
+        heading: "council",
         description:
-          "For two years now, I've been taking part in the life of the Faculty Student Council (WRS MiNI) at Warsaw University of Technology. I've organized several events, such as the integration trip \"MiNIówka\" and the faculty picnic \"Całkonalia\", and designed graphics for our events. I've been a member of the social media team and managed the partnerships team. I also oversee the council's budget, assist project leaders in drafting funding applications, and run training sessions on financial procedures for our members.",
+          "For two years now, I've been an active member of the Faculty Student Council (WRS MiNI) at Warsaw University of Technology, a team of about 25 people. During the last council term, I was a delegate to the Finance and Economic Committee: I oversaw the council's budget, assisted project leaders in drafting funding applications, and ran training sessions on financial procedures for our members. I've also managed the partnerships team of about 8 people, been a member of the social media team and designed graphics for our events.",
         tags: [
-          "event organization",
-          "graphic design",
-          "social media",
-          "partnerships",
           "budget",
+          "funding applications",
+          "partnerships",
+          "social media",
+          "graphic design",
         ],
+        stats: {
+          years: "2",
+          council_members: "~25",
+          partnerships_team: "~8",
+        },
         photos: [
           {
             src: "/img/wrs_mini/wrs_bonfire_graphic.jpg",
@@ -88,6 +107,29 @@ export const activities: ActivityData[] = [
             alt: "Event graphic for the post-session bonfire \"Ognisko Posesyjne\"",
             caption: "Graphic for the post-session bonfire \"Ognisko Posesyjne\"",
             credit: "designed by me",
+          },
+        ],
+      },
+      {
+        heading: "events",
+        description:
+          "I've helped organize 6+ events for students of our faculty. I was the main coordinator of the integration trip \"MiNIówka\", leading a 9-person organizing team for 55 participants. At other events, such as the faculty picnic \"Całkonalia\" with around 400-500 attendees, I was one of the organizers.",
+        tags: ["event organization", "team coordination"],
+        stats: {
+          events: "6+",
+          miniowka_participants: "55",
+          miniowka_team: "9",
+          calkonalia_attendees: "400-500",
+        },
+        photos: [
+          {
+            src: "/img/wrs_mini/calkonalia.jpg",
+            width: 1628,
+            height: 1334,
+            alt: "Me grilling sausages at the Całkonalia faculty picnic",
+            caption:
+              "Grilling sausages for participants of the faculty picnic \"Całkonalia\"",
+            credit: "photo: Michał Popkowicz, FOCUS",
           },
         ],
       },
@@ -103,6 +145,7 @@ export const activities: ActivityData[] = [
         description:
           "I've been an orienteering runner for over 10 years, representing the UNTS Warszawa club. Over that time I've won 13 medals at the Polish Championships, 5 of them gold. I was also a member of the Polish Youth Team and represented Poland at the 2022 European Youth Orienteering Championships (EYOC). Orienteering combines running with navigation: you race through unknown terrain with only a map and a compass, choosing your own route between the controls, so every race is as much a mental challenge as a physical one.",
         tags: ["orienteering", "running", "unts warszawa"],
+        stats: { years: "10+", polish_champs_medals: "13", gold: "5" },
         photos: [
           {
             src: "/img/sports/unts_waw.jpeg",

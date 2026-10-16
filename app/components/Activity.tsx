@@ -13,7 +13,13 @@ type Props = {
   activity: ActivityData;
 };
 
-function Section({ heading, description, tags, photos }: ActivitySection) {
+function Section({
+  heading,
+  description,
+  tags,
+  stats,
+  photos,
+}: ActivitySection) {
   return (
     <div className="flex flex-col gap-6">
       {heading && (
@@ -29,6 +35,21 @@ function Section({ heading, description, tags, photos }: ActivitySection) {
         <div className="text-sm">
           <span className="text-primary">tags</span>
           {` = {${tags.map((item) => `"${item}"`).join(", ")}}`}
+        </div>
+      )}
+
+      {stats && (
+        <div className="text-sm">
+          <span className="text-primary">stats</span>
+          {" = {"}
+          {Object.entries(stats).map(([key, value], index) => (
+            <span key={key}>
+              {index > 0 && ", "}
+              <span className="text-secondary">{`${key}: `}</span>
+              {value}
+            </span>
+          ))}
+          {"}"}
         </div>
       )}
 
@@ -55,7 +76,8 @@ function Section({ heading, description, tags, photos }: ActivitySection) {
                   width={photo.width}
                   height={photo.height}
                   sizes="(min-width: 768px) 50vw, 90vw"
-                  className="w-full h-auto border border-accent transition duration-300 ease-in-out hover:scale-[1.02]"
+                  // single photo keeps its width but tall portraits are capped
+                  className={`h-auto border border-accent transition duration-300 ease-in-out hover:scale-[1.02] ${photos.length === 1 ? "w-auto max-w-full md:max-h-[24rem]" : "w-full"}`}
                 />
               </a>
               <figcaption className="text-xs md:text-sm text-secondary">
